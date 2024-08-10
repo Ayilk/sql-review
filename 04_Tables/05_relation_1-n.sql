@@ -7,6 +7,10 @@ CREATE TABLE companies(
     name varchar(100) NOT NULL
 );
 
+--Creamos la columna que tendrá la llave foranea de la tabla companies en la tabla users
+ALTER TABLE users
+ADD company_id int;
+
 ALTER TABLE users 
 ADD CONSTRAINT fk_companies
 FOREIGN KEY(company_id) REFERENCES companies(company_id);
