@@ -14,3 +14,17 @@ ADD company_id int;
 ALTER TABLE users 
 ADD CONSTRAINT fk_companies
 FOREIGN KEY(company_id) REFERENCES companies(company_id);
+
+--INSERT Insertamos datos en la tabla companies, en la columna name
+INSERT INTO companies (name) VALUES ('Apple');
+INSERT INTO companies (name) VALUES ('Google');
+INSERT INTO companies (name) VALUES ('Microsoft');
+INSERT INTO companies (name) VALUES ('SpaceX');
+INSERT INTO companies (name) VALUES ('VivieEnergía');
+
+--Actualizamos la columna recién creada company_id de la tabla users
+--relacionando una compañia con un usuario
+UPDATE users SET company_id = 1 WHERE user_id = 1;
+UPDATE users SET company_id = 2 WHERE user_id = 7;
+UPDATE users SET company_id = 3 WHERE user_id = 5;
+UPDATE users SET company_id = 4 WHERE user_id = 6;

@@ -7,3 +7,9 @@ user_id int,
 UNIQUE(dni_id),
 FOREIGN KEY(user_id) REFERENCES users(user_id)
 );
+
+--INSERT
+INSERT INTO dni (dni_number, user_id) VALUES (12345678, 1);
+INSERT INTO dni (dni_number, user_id) VALUES (12345671, 2);
+INSERT INTO dni (dni_number, user_id) VALUES (12345672, 3);
+INSERT INTO dni (dni_number) VALUES (123456783);
